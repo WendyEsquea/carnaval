@@ -1,0 +1,243 @@
+/* ============================= */
+/*           GENERAL             */
+/* ============================= */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+/* ============================= */
+/*           NAVBAR              */
+/* ============================= */
+.navbar {
+    background-color: #33302e;
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white !important;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgb(245, 245, 237) !important;
+}
+
+/* ============================= */
+/*        HEADER / PORTADA       */
+/* ============================= */
+.header-section {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(255, 255, 255); /* Aseguramos que el texto sea legible */
+}
+
+.header-section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra todo el área */
+    z-index: -1; /* Coloca el video detrás del contenido */
+}
+
+.header-section .content {
+    z-index: 1; /* Asegura que el contenido esté sobre el video */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
+    border-radius: 10px; /* Bordes redondeados para un efecto más suave */
+}
+
+
+/* ============================= */
+/*         SECCIÓN EVENTOS       */
+/* ============================= */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+#eventos {
+    background: linear-gradient(135deg, #fcfaf1 0%, #fff5e6 100%);
+    padding: 80px 0;
+}
+
+#eventos h2 {
+    font-size: 3rem;
+    color: #6a1b9a;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.event-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.event-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.event-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.event-card:hover .event-image img {
+    transform: scale(1.1);
+}
+
+.event-date {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(106, 27, 154, 0.9);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 1;
+}
+
+.event-date .day {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.event-date .month {
+    display: block;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.event-content {
+    padding: 25px;
+}
+
+.event-content h3 {
+    color: #6a1b9a;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.event-content p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.btn-more {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #6a1b9a;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.btn-more:hover {
+    background: #8e24aa;
+    transform: scale(1.05);
+    color: white;
+}
+
+/* Animaciones adicionales */
+.animate__animated {
+    animation-duration: 1s;
+}
+
+@media (max-width: 768px) {
+    #eventos h2 {
+        font-size: 2rem;
+    }
+    
+    .event-card {
+        margin-bottom: 30px;
+    }
+}
+
+/* ============================= */
+/*         FOOTER                */
+/* ============================= */
+.footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+#galeria {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.gallery-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+#contacto {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+#contacto h2 {
+    color: #504d4d;
+}
+
+#contacto .form-control {
+    border-radius: 5px;
+    border: 1px solid #cadef3;
+}
+
+#contacto .btn-primary {
+    background-color: #c92b23;
+    border: none;
+    transition: background 0.3s ease-in-out;
+}
+
+#contacto .btn-primary:hover {
+    background-color: #ee2c22;
+}
+
